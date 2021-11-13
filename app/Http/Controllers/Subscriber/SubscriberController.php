@@ -27,8 +27,6 @@ class SubscriberController extends Controller
 
         $returningSubscribers = User::returningSubscribers()->with( 'activeSubscription' )->get();
 
-        dd( $allSubscribers );
-
         $chartResources = [];
 
         list( $chartResources, $allSubscribersCount, $totalAllSubscribersOnProPlan, $totalAllSubscribersOnTurboPlan, $allSubscribersTotalUsdProfit, $allSubscribersTotalNairaProfit ) = $this->updateChartResourcesAndGetTotals( $chartResources, $allSubscribers, 'all' );
