@@ -54,23 +54,23 @@ class DashboardController extends Controller
 
         $chartResources = [
             'allSubscribers' => [
-                'lable' => $arrayOfGroupedSubscribersYears,
+                'label' => $arrayOfGroupedSubscribersYears,
                 'data'  => $arrayOfGroupedSubscribersCount
             ],
             'allProPlanSubscribers' => [
-                'lable' => $arrayOfGroupedProPlanSubscribersYears,
+                'label' => $arrayOfGroupedProPlanSubscribersYears,
                 'data'  => $arrayOfGroupedProPlanSubscribersCount
             ],
             'allTurboPlanSubscribers' => [
-                'lable' => $arrayOfGroupedTurboPlanSubscribersYears,
+                'label' => $arrayOfGroupedTurboPlanSubscribersYears,
                 'data'  => $arrayOfGroupedTurboPlanSubscribersCount
             ],
             'allUsdProfits' => [
-                'lable' => $arrayOfGroupedUsdProfitsYears,
+                'label' => $arrayOfGroupedUsdProfitsYears,
                 'data'  => $arrayOfGroupedUsdProfits
             ],
             'allNairaProfits' => [
-                'lable' => $arrayOfGroupedNairaProfitsYears,
+                'label' => $arrayOfGroupedNairaProfitsYears,
                 'data'  => $arrayOfGroupedNairaProfits
             ],
         ];
