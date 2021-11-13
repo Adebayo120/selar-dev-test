@@ -81,7 +81,7 @@
             </button>
             <div class="dropdown-menu">
                 @foreach ( $arrayOfSubscribersYears as $year )
-                    <a class="dropdown-item" href="{{ request()->fullUrl() }}{{ $_SERVER['QUERY_STRING'] ? '&' : '?' }}{{ $identifier }}SubscribersYear={{ $year }}">{{ $year }}</a>
+                    <a class="dropdown-item filterByYear" data-index="{{ $identifier }}SubscribersYear" href="#">{{ $year }}</a>
                 @endforeach
             </div>
         </div>

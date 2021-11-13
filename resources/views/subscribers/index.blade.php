@@ -62,4 +62,27 @@
   </script>
   <script src="{{ asset( 'js/demo/chart-area-demo.js' ) }}"></script>
   @include('includes.filterables.js')
+  <script>
+          $('.filterByYear').on("click", function(e) {
+            e.preventDefault();
+
+            var year = $(this).text();
+
+            let filter_index = $(this).data("index");
+
+            var urlParams = new URLSearchParams(window.location.search);
+
+            if ( urlParams.has( filter_index ) ) {
+                urlParams.delete( filter_index );
+            }
+
+            urlParams.append( filter_index, year );
+
+            let query_string = urlParams.toString();
+
+            let url = `{{ request()->url() }}?${query_string}`;
+
+            window.location.assign( url )
+          });
+  </script>
 @endsection
